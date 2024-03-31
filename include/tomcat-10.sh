@@ -92,7 +92,7 @@ EOF
     cat > /etc/logrotate.d/tomcat << EOF
 ${tomcat_install_dir}/logs/catalina.out {
   daily
-  rotate 5
+  rotate 3
   missingok
   dateext
   compress
