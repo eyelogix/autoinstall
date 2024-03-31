@@ -19,21 +19,6 @@
   </GlobalNamingResources>
 
   <Service name="Catalina">
-    
-    <Connector port="8080"
-              protocol="org.apache.coyote.http11.Http11AprProtocol"
-              connectionTimeout="20000"
-              redirectPort="8443"
-              maxThreads="1000"
-              minSpareThreads="20"
-              acceptCount="1000"
-              maxHttpHeaderSize="65536"
-              disableUploadTimeout="true"
-              useBodyEncodingForURI="true"
-              enableLookups="false"
-              URIEncoding="UTF-8" />
-
-
    <Connector port="8080" 
             protocol="org.apache.coyote.http11.Http11AprProtocol"
             sendReasonPhrase="true"
@@ -41,8 +26,8 @@
             useBodyEncodingForURI="true"
             connectionTimeout="20000"
             maxThreads="50000"
-	          minSpareThreads="200"
-	          maxSpareThreads="500"
+            minSpareThreads="200"
+	    maxSpareThreads="500"
             redirectPort="8443"
             maxParameterCount="20000"
             maxHttpHeaderSize="21000"
@@ -50,10 +35,9 @@
             compression="Off"
             maxConnections="200000"
             maxKeepAliveRequests="100000"
-	          keepAliveTimeout="60"
+	    keepAliveTimeout="60"
             acceptCount="50000" 
             maxPostSize="16777216"/>
-    
     
     <Engine name="Catalina" defaultHost="localhost">
       <Realm className="org.apache.catalina.realm.LockOutRealm">
