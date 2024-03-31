@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Temp Error</title>
+<style>
+body{font-family: 'arial', serif; font-size: 20px; line-height: 1.42857143;color: #333;background-color: #fff;}
+.page_404{width: 100%; margin: auto; text-align: center;}
+.page_404  img{ width:100%;}
+.four_zero_four_bg{background: url(temp_unavailable.gif) no-repeat center;height: 400px;}
+.four_zero_four_bg h1{font-size:30px;}
+.link_404{color: #fff;padding:10px 20px;background: #39ac31;margin:5px 0;display:inline-block; text-decoration: none;}
+.contant_box_404{ margin-top:-50px;}
+</style>
+</head>
+<body>
+<section class="page_404">
+	<div class="four_zero_four_bg">
+		<h1>Temp Error</h1>
+	</div>
+	<div class="contant_box_404">
+		<h3>Look like you're lost</h3>
+		<p>Temperory unavailabe or network broken, please try again after some time!</p>
+	</div>	
+</section>
+</body>
+</html>
