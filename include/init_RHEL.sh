@@ -86,6 +86,11 @@ net.ipv4.tcp_max_orphans = 3276800
 net.ipv4.ip_local_port_range = 10000 65000
 net.nf_conntrack_max = 6553500
 net.netfilter.nf_conntrack_max = 6553500
+# ---- For Max Threads Limit -----
+kernel.pid_max = 300000
+kernel.threads-max = 300000
+vm.max_map_count = 300000
+# --------------------------------
 net.netfilter.nf_conntrack_tcp_timeout_close_wait = 60
 net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 120
 net.netfilter.nf_conntrack_tcp_timeout_time_wait = 120
