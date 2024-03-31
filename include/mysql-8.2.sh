@@ -125,10 +125,10 @@ ft_min_word_len = 4
 
 log_bin = mysql-bin
 binlog_format = mixed
-binlog_expire_logs_seconds = 604800
+binlog_expire_logs_seconds = 259200
 
 log_error = ${mysql_data_dir}/mysql-error.log
-slow_query_log = 1
+slow_query_log = 0
 long_query_time = 1
 slow_query_log_file = ${mysql_data_dir}/mysql-slow.log
 
@@ -142,20 +142,20 @@ skip-external-locking
 default_storage_engine = InnoDB
 #default-storage-engine = MyISAM
 innodb_file_per_table = 1
-innodb_open_files = 500
-innodb_buffer_pool_size = 64M
-innodb_write_io_threads = 4
-innodb_read_io_threads = 4
+innodb_open_files = 1000
+innodb_buffer_pool_size = 128M
+innodb_write_io_threads = 8
+innodb_read_io_threads = 8
 innodb_thread_concurrency = 0
 innodb_purge_threads = 1
 innodb_flush_log_at_trx_commit = 2
-innodb_log_buffer_size = 2M
-innodb_log_file_size = 32M
+innodb_log_buffer_size = 32M
+innodb_log_file_size = 1024M
 innodb_log_files_in_group = 3
 innodb_max_dirty_pages_pct = 90
 innodb_lock_wait_timeout = 120
 
-bulk_insert_buffer_size = 8M
+bulk_insert_buffer_size = 32M
 myisam_sort_buffer_size = 8M
 myisam_max_sort_file_size = 10G
 
