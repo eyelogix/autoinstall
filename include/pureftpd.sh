@@ -44,12 +44,12 @@ Install_PureFTPd() {
     # Firewall Ftp
     if [ "${PM}" == 'yum' ]; then
       if [ "`firewall-cmd --state`" == "running" ]; then
-        firewall-cmd --permanent --zone=public --add-port={21/tcp,20000-30000/tcp}
+        firewall-cmd --permanent --zone=public --add-port={8300/tcp,20000-30000/tcp}
         firewall-cmd --reload
       fi
     elif [ "${PM}" == 'apt-get' ]; then
       if ufw status | grep -wq active; then
-	  ufw allow 21/tcp
+	  ufw allow 8300/tcp
 	  ufw allow 20000:30000/tcp
       fi
     fi
