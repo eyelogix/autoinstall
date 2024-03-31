@@ -219,14 +219,15 @@ listen.mode = 0666
 user = ${run_user}
 group = ${run_group}
 
-pm = dynamic
-pm.max_children = 12
-pm.start_servers = 8
-pm.min_spare_servers = 6
-pm.max_spare_servers = 12
+#pm = dynamic
+pm = ondemand
+pm.max_children = 70
+pm.start_servers = 50
+pm.min_spare_servers = 40
+pm.max_spare_servers = 70
 pm.max_requests = 2048
 pm.process_idle_timeout = 10s
-request_terminate_timeout = 120
+request_terminate_timeout = 601
 request_slowlog_timeout = 0
 
 pm.status_path = /php-fpm_status
